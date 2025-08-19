@@ -1,16 +1,28 @@
-<!doctype html>
-<html lang="en" data-beasties-container="">
-<head>
-  <meta charset="utf-8">
-  <title>Rsvp</title>
-  <base href="/KevinCassie">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
-<style>body{font-family:Mali;margin:0!important;position:relative}</style><link rel="stylesheet" href="styles-CH2FYLCI.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-CH2FYLCI.css"></noscript></head>
-<body ngcm="">
-  <app-root></app-root>
-<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-KTOE5RY5.js" type="module"></script></body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Get the current path from the URL, like /about or /contact
+      var path = window.location.pathname;
+
+      // Get the segment of the path for the GitHub Pages repository, if any
+      // For example, if your site is at https://user.github.io/my-repo/, this gets /my-repo
+      var repo = '/' + path.split('/')[1];
+
+      // Redirect from the 404 page to the index.html page, passing the
+      // original path as a query parameter.
+      // The session storage is used to prevent an infinite redirect loop.
+      if (sessionStorage.redirect) {
+        sessionStorage.removeItem('redirect');
+      } else {
+        sessionStorage.redirect = true;
+        window.location.href = repo + '/?p=' + path;
+      }
+    </script>
+  </head>
+  <body>
+    If you are not redirected automatically, please <a href="/">click here</a>.
+  </body>
 </html>
